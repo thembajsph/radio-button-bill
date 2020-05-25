@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton-framework/1.1.1/skeleton.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container">
+
+	<div class="row">
+		<div class="twelve columns box">
+			<h3>Radio button bill</h3>
+  
+			<div class="">
+			  Select the call or sms radio button. Update the appropriate total and the global total when the ADD button in pressed.
+			</div>
+			<br>
+			<div class="">
+			  <i>Calls costs R2.75 and a SMS R0.75</i>
+			</div>
+  
+			<div class="">
+			  <i>If the total cost exceed R30.00 show the total cost in orange, if over R50 show it in red.</i>
+			</div>
+			<br>
+			<div class="">
+			  <i>What is the benefit of using radio buttons?</i>
+			</div>
+  
+			<hr>
+  
+			<div class="row">
+			  <div class="six columns">
+				<h5>Bill type</h5>
+				<label class="">
+				  <input type="radio" name="billItemType" class="billItemTypeRadio" value="call">
+				  <span class="label-body">Call</span>
+				</label>
+				<label class="">
+				  <input type="radio" name="billItemType" class="billItemTypeRadio" value="sms">
+				  <span class="label-body" >SMS</span>
+				</label>
+				<button class="button-primary radioBillAddBtn" type="button" name="button">Add</button>
+			  </div>
+			  <div class="six columns">
+					<h5>Totals</h5>
+					<table>
+					  <tr>
+						<td>Call total</td>
+						<td>R<span class="callTotalTwo">0.00</span></td>
+					  </tr>
+					  <tr>
+						<td>SMS total</td>
+						<td>R<span class="smsTotalTwo">0.00</span></td>
+					  </tr>
+					  <tr >
+						<td>Total</td>
+						<td class="orange" >R<span class="totalTwo">0.00</span></td>
+					  </tr>
+					</table>
+			  </div>
+			</div>
+		  </div>
+	</div>
+    
+  </div>
+
+</body>
+<script src="radio-button-bill.js"></script>
+</html>
