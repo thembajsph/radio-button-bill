@@ -16,31 +16,26 @@ function calculateBtn() {
     var billItemType = checkedRadioBtn.value;
     // billItemType will be 'call' or 'sms';
 
+  
     //putting back all the results to html
     function appedingToHtml() {
    //   var total = radioBillInstance.calculateBtn(billItemType);
+   var total = radioBillInstance.calculateBtno(billItemType);
 
-
-      callTotalTwoElem.innerHTML = radioBillInstance.getTotalcall().toFixed(2);
-      smsTotalTwoElem.innerHTML = radioBillInstance.getTotalSms().toFixed(2);
-      totalTwoElem.innerHTML = radioBillInstance.Alltotal().toFixed(2);
+      callTotalTwoElem.innerHTML = radioBillInstance.getCallTotal().toFixed(2);
+      smsTotalTwoElem.innerHTML = radioBillInstance.getSmsTotal().toFixed(2);
+      totalTwoElem.innerHTML = radioBillInstance.allTotal().toFixed(2);
+      colorCode();
+  //trigering the click event 
    }
-  
   }
-  // var total = radioBillInstance.totalPhoneBill(billString);   
+  
+     
   // styleTotalColor(roundedBillTotal);
   //billTotalElement.innerHTML = roundedBillTotal.toFixed(2);  
   //calling the add color function
 
  
-
-
-
-  colorCode();
-  //trigering the click event
-  radioBillAddBtnElem.addEventListener('click', calculateBtn)
-
-
  //putting the results to html
  appedingToHtml();
 
@@ -50,11 +45,14 @@ function calculateBtn() {
 
   //created a function for coloring my totals.
   function colorCode() {
-    if (RadioBillInstance.Alltotal() >= 50) {
+    if (radioBillInstance.allTotal() >= 50) {
       totalTwoElem.classList.add("danger");
     }
-    else if (RadioBillInstance.Alltotal() >= 30 && RadioBillInstance.Alltotal() <= 50) {
+    else if(radioBillInstance.allTotal() >=30 && radioBillInstance.allTotal() <= 50){
       totalTwoElem.classList.add("warning");
-    }
-  }
+   }
+ }
 };
+  
+  
+radioBillAddBtnElem.addEventListener('click', calculateBtn);

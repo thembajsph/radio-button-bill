@@ -18,7 +18,7 @@ function calculateBtno(billItemType){
 
  } 
   
- function getTotalcall() {
+ function getCallTotal() {
 return callsTotal
   }
 
@@ -32,7 +32,7 @@ return  total = callsTotal + smsTotal
 
 return {
     calculateBtno,
-    getTotalcall,
+    getCallTotal,
     getSmsTotal,
     allTotal
 }
